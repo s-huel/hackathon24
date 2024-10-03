@@ -1,17 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Log In</title>
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Log In</title>
+   <link rel="stylesheet" href="css/style.css">
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet">
+   <script src="js/main.js" defer></script>
 </head>
+
 <body>
-    <h1 class="montserrat-h1">Test Font</h1>
-    
-    <script src="js/main.js"></script>
+
+   <div class="container">
+
+      <div>
+         <h2 class="montserrat-h2 text">Welkom</h2>
+      </div>
+
+      <form id="login-form">
+         <div class="form-row">
+            <div class="input-data">
+               <input type="text" name="email" id="email" required>
+               <div class="underline"></div>
+               <label class="montserrat-p" for="email">Email</label>
+            </div>
+         </div>
+         <div class="form-row">
+            <div class="input-data">
+               <input type="password" name="password" id="password" required>
+               <div class="underline"></div>
+               <label class="montserrat-p" for="password">Wachtwoord</label>
+            </div>
+         </div>
+         <div class="form-row submit-btn">
+            <div class="input-data">
+               <div class="inner"></div>
+               <input class="montserrat-p" type="submit" value="Log In">
+            </div>
+         </div>
+      </form>
+   </div>
+      
+   </div>
+
 </body>
+
 </html>
