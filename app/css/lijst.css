@@ -1,0 +1,113 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #333;
+    color: white;
+}
+
+.docent-container {
+    display: flex;
+    align-items: center;
+}
+
+.docent-foto {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 30px;
+}
+
+.docent-naam {
+    margin-left: 5; 
+}
+
+.navbar-rechts {
+    display: flex;
+    align-items: center;
+}
+
+#leerjaar-select {
+    margin-right: 10px;
+}
+
+.logout-btn {
+    background-color: red;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    cursor: pointer;
+}
+
+#studenten-container {
+    margin: 20px;
+}
+
+.student-profiel {
+    display: flex;
+    align-items: center;
+    background-color: white;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    max-width: 900px;  /* Grotere breedte voor de studentkaartjes */
+    margin-left: auto;
+    margin-right: auto;  /* Zorgt dat de kaartjes gecentreerd zijn */
+    width: 100%;  /* Zorgt dat de kaartjes zich aanpassen aan de schermbreedte */
+}
+
+.student-foto {
+    width: 50px;  /* Grotere foto */
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 20px;
+}
+
+.student-info {
+    flex-grow: 1;
+}
+
+.progress-container {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin-left: 20px;
+}
+
+progress {
+    width: 200px;  /* Grotere progressbar */
+    height: 15px;
+    margin-right: 10px;
+}
+
+.status-indicator {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: grey;  /* Default kleur als er geen voortgang is */
+}
+
+.groen {
+    background-color: green;
+}
+
+.geel {
+    background-color: yellow;
+}
+
+.rood {
+    background-color: red;
+}
