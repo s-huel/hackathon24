@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Test</title>
+</head>
+<body>
+    <h1>Login Form</h1>
+
+    <!-- Login Form -->
+    <form id="loginForm">
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required><br><br>
+
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required><br><br>
+
+        <button type="submit">Login</button>
+    </form>
+
+    <p id="result"></p>
+
+    <script>
+        // Get the form element
+        const form = document.getElementById('loginForm');
+        const result = document.getElementById('result');
+
+        // Add a submit event listener
+        form.addEventListener('submit', async function(event) {
+            event.preventDefault(); // Prevent the form from submitting the traditional way
+
+            // Get form data
+            const email = document.getElementById('email').value;
+            const password = document.getElementById('password').value;
+
+            // Send the login request to the FastAPI backend
+            try {
+                const response = await fetch('http://127.0.0.1:8000/login?email=' + email + '&password=' + password, {
+                    method: 'GET',
+                });
+
+                // If the response is OK, parse the JSON
+                if (response.ok) {
+                    const data = await response.json();
+                    result.textContent = `Login successful! Data: ${JSON.stringify(data)}`;
+                } else {
+                    const errorData = await response.json();
+                    result.textContent = `Error: ${errorData.detail}`;
+                }
+
+            } catch (error) {
+                result.textContent = `Error: ${error.message}`;
+            }
+        });
+    </script>
+</body>
+</html>
