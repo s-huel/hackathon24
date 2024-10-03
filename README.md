@@ -9,3 +9,5 @@ To use the requirements.txt, use;
 To use fast api's
 
 python -m uvicorn file_name:app --reload
+
+test
