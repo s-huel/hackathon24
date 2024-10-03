@@ -19,36 +19,38 @@ def login(email: str, password: str):
         )
         cursor = connection.cursor()
 
-        # SQL query to fetch the student by email and password
+        # 1. SQL query to fetch the student by email and password
         query = "SELECT * FROM `Student` WHERE email = %s AND password = %s"
         cursor.execute(query, (email, password))
 
-        # Fetch one result
+        # Fetch one result for Student
         data = cursor.fetchone()
 
-        # If no student is found, repeat for teacher
+        # 2. If no student is found, check the Teacher table
         if data is None:
             query = "SELECT * FROM `Teacher` WHERE email = %s AND password = %s"
             cursor.execute(query, (email, password))
             data = cursor.fetchone()
 
-            query = "SELECT * FROM `Admin` WHERE email = %s AND password = %s"
-            cursor.execute(query, (email, password))
-            dataAdmin = cursor.fetchone()
-            
-            if dataAdmin is not None:
-                data = dataAdmin
-            
-            if data is None and dataAdmin is None:
-                # If no student or teacher is found, return an error
-                raise HTTPException(status_code=404, detail="User not found")
+        # 3. Always check the Admin table last
+        query = "SELECT * FROM `Admin` WHERE email = %s AND password = %s"
+        cursor.execute(query, (email, password))
+        admin_data = cursor.fetchone()
 
-        # Return the data found
+        # 4. Replace the data with admin data if an admin is found
+        if admin_data is not None:
+            data = admin_data
+
+        # 5. If no user (student, teacher, or admin) is found, raise an exception
+        if data is None:
+            raise HTTPException(status_code=404, detail="User not found")
+
+        # 6. Return the data found (could be student, teacher, or admin)
         return {"data": data}
-    
+
     except mysql.connector.Error as err:
         # Handle database connection errors
-        raise HTTPException(status_code=500, detail="Database connection error" + str(err))
+        raise HTTPException(status_code=500, detail="Database connection error: " + str(err))
     
     finally:
         # Ensure the cursor and connection are closed
@@ -56,7 +58,6 @@ def login(email: str, password: str):
             cursor.close()
         if connection:
             connection.close()
-
 
 if __name__ == "__main__":
     import uvicorn
