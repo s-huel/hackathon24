@@ -42,5 +42,6 @@ CREATE TABLE `Student` (
     `LastName` VARCHAR(255) NULL,
     `DateOfBirth` DATE NOT NULL,
     `Picture` BLOB NULL,
-    `Classnumber` INT NOT NULL REFERENCES Class(Classnumber)
+    `Classnumber` INT NOT NULL REFERENCES Class(Classnumber),
+    `Voortgang` INT NULL
 );

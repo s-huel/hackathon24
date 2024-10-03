@@ -18,6 +18,6 @@ VALUES
 (1, 'LBC1', 'T001', 1, 2020, 25604);
 
 -- Insert into Student table
-INSERT INTO `Student` (`Studentnumber`, `Email`, `Password`, `FirstName`, `LastName`, `DateOfBirth`, `Picture`, `Classnumber`) 
+INSERT INTO `Student` (`Studentnumber`, `Email`, `Password`, `FirstName`, `LastName`, `DateOfBirth`, `Picture`, `Classnumber`, `Voortgang`) 
 VALUES
-(1, 'student@rijnijssel.nl', 'student', 'Joke', 'Doe', '1999-01-01', NULL, 1);
+(1, 'student@rijnijssel.nl', 'student', 'Joke', 'Doe', '1999-01-01', NULL, 1, 50);
