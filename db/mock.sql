@@ -4,7 +4,7 @@ USE `Lerend_Kwalificeren`;
 INSERT INTO `Admin` (`AdminID`, `Email`, `Password`, `FirstName`, `LastName`, `DateOfBirth`) 
 VALUES
 (1, 'admin@rijnijssel.nl', 'admin', 'John', 'Doe', '1999-01-01'),
-(2, 'adteach@rijnijsselnl', 'adteach', 'Jack', 'Doe', '1999-01-01');
+(2, 'adteach@rijnijssel.nl', 'adteach', 'Jack', 'Doe', '1999-01-01');
 
 -- Insert into Teacher table
 INSERT INTO `Teacher` (`TeacherID`, `Email`, `Password`, `FirstName`, `LastName`, `DateOfBirth`, `Picture`, `LBC`, `PO`) 
