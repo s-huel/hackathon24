@@ -1,6 +1,12 @@
-.montserrat-h1 {
+.montserrat {
     font-family: "Montserrat", system-ui;
     font-optical-sizing: auto;
-    font-weight: 900;
     font-style: normal;
-  }
+}
+
+.montserrat-h1 { font-weight: 900; }
+.montserrat-h2 { font-weight: 800; }
+.montserrat-h3 { font-weight: 700; }
+.montserrat-h4 { font-weight: 600; }
+.montserrat-h5 { font-weight: 500; }
+.montserrat-h6, .montserrat-p { font-weight: 400; }
