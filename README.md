@@ -1,1 +1,4 @@
-# hackathon24
+# Hackathon Avisi 2024
+
+Lerend Kwalificeren
+
