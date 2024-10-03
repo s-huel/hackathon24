@@ -31,7 +31,7 @@ CREATE TABLE `Class` (
     `TeacherID` VARCHAR(5) NOT NULL REFERENCES Teacher(TeacherID),
     `Cohort` INT NOT NULL,
     `StartYear` INT NOT NULL,
-    `Kwebbelnumber` INT NOT NULL,
+    `Crebcode` INT NOT NULL,
 );
 
 CREATE TABLE `Student` (
