@@ -42,3 +42,8 @@ function logout() {
 }
 
 document.querySelector('.logout-btn').addEventListener('click', logout);
+
+if (localStorage.getItem("data") != null) {
+    const data = (localStorage.getItem("data"));
+    console.log(data);
+}
