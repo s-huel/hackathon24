@@ -17,11 +17,13 @@ document.getElementById("login-form").addEventListener("submit", async function(
 
             // Assuming the result contains user data, store the ID in localStorage/sessionStorage
             if (result.data) {
-                const userId = result.data[0];  // Assuming the first element is the user ID
-                localStorage.setItem("userId", userId);  // Store the ID for use in other pages
-
-                // Redirect to the home page
-                window.location.href = "home.html";
+                localStorage.setItem("data", result.data);  // Store the ID for use in other pages
+                localStorage.setItem("role", result.role);  // Store the role for use in other pages
+                
+                if (result.role == "Teacher") {
+                    window.location.href = "studentenlijst.html";
+                }
+                else window.location.href = "werkproces.html";
             }
         } else {
             // Handle error responses
@@ -32,4 +34,5 @@ document.getElementById("login-form").addEventListener("submit", async function(
         console.error("Error during fetch:", error);
         alert("Something went wrong. Please try again later.");
     }
+    console.log(localStorage.getItem("role"));
 });
