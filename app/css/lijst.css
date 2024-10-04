@@ -87,6 +87,7 @@ header {
 
 #studenten-container {
     margin: 20px;
+    cursor: pointer;
 }
 
 .student-profiel {
