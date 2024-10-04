@@ -312,18 +312,12 @@ tbody tr:nth-child(even) {
     }
 }
 
-/* Container for student cards */
-/* Container for student cards */
-#students-con {
-    margin: 20px;
-}
-
 /* Styling for each student card */
 .student-card {
     display: flex;
     align-items: center;
     background-color: var(--tertiary-color);
-    padding: 20px;
+    padding: 90px;
     margin-bottom: 15px;
     border-radius: 8px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
@@ -336,27 +330,14 @@ tbody tr:nth-child(even) {
 
 /* Styling for student image */
 .student-image {
-    width: 80px;  /* Increased size */
-    height: 80px; /* Increased size */
+    width: 100px;  /* Increased size */
+    height: 100px; /* Increased size */
     border-radius: 50%;
     margin-right: 20px;
 }
 
 /* Styling for student details */
-.student-details {
+.student-info {
     flex-grow: 1;
-    text-align: left; /* Align text to the left */
-}
-
-/* Text styling for card, aligned with Montserrat */
-.montserrat-card {
-    font-family: "Montserrat", sans-serif;
-    font-weight: 400;
-    font-size: 1rem;
-    margin-bottom: 5px;
-}
-
-/* Adapt font size for student name */
-.montserrat-card h3 {
-    font-weight: 700;
+    text-align: right; /* Align text to the left */
 }
