@@ -7,29 +7,29 @@
 }
 
 .montserrat-h1 {
-  font-family: "Montserrat", system-ui;
-  font-optical-sizing: auto;
-  font-weight: 900;
-  font-style: normal;
-  margin-bottom: 1.5rem;
-  text-align: center;
+    font-family: "Montserrat", system-ui;
+    font-optical-sizing: auto;
+    font-weight: 900;
+    font-style: normal;
+    margin-bottom: 1.5rem;
+    text-align: center;
 }
 
 .montserrat-h2 {
-  font-family: "Montserrat", system-ui;
-  font-optical-sizing: auto;
-  font-weight: 800;
-  font-style: normal;
-  margin-bottom: 1.5rem;
-  font-size: 1.8rem;
-  text-align: center;
+    font-family: "Montserrat", system-ui;
+    font-optical-sizing: auto;
+    font-weight: 800;
+    font-style: normal;
+    margin-bottom: 1.5rem;
+    font-size: 1.8rem;
+    text-align: center;
 }
 
 .montserrat-p {
-  font-family: "Montserrat", system-ui;
-  font-optical-sizing: auto;
-  font-weight: 400;
-  font-style: normal;
+    font-family: "Montserrat", system-ui;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
 }
 
 * {
@@ -65,7 +65,7 @@ header {
 }
 
 .docent-naam {
-    margin-left: 5; 
+    margin-left: 5;
 }
 
 .navbar-rechts {
@@ -98,14 +98,18 @@ header {
     margin-bottom: 10px;
     border-radius: 5px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    max-width: 900px;  /* Grotere breedte voor de studentkaartjes */
+    max-width: 900px;
+    /* Grotere breedte voor de studentkaartjes */
     margin-left: auto;
-    margin-right: auto;  /* Zorgt dat de kaartjes gecentreerd zijn */
-    width: 100%;  /* Zorgt dat de kaartjes zich aanpassen aan de schermbreedte */
+    margin-right: auto;
+    /* Zorgt dat de kaartjes gecentreerd zijn */
+    width: 100%;
+    /* Zorgt dat de kaartjes zich aanpassen aan de schermbreedte */
 }
 
 .student-foto {
-    width: 50px;  /* Grotere foto */
+    width: 50px;
+    /* Grotere foto */
     height: 50px;
     border-radius: 50%;
     margin-right: 20px;
@@ -123,7 +127,8 @@ header {
 }
 
 progress {
-    width: 200px;  /* Grotere progressbar */
+    width: 200px;
+    /* Grotere progressbar */
     height: 15px;
     margin-right: 10px;
 }
@@ -132,7 +137,8 @@ progress {
     width: 20px;
     height: 20px;
     border-radius: 50%;
-    background-color: grey;  /* Default kleur als er geen voortgang is */
+    background-color: grey;
+    /* Default kleur als er geen voortgang is */
 }
 
 .groen {
@@ -182,4 +188,175 @@ select {
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
+}
+
+table {
+    width: 90%;
+    /* Full width */
+    margin: 20px auto;
+    /* Center table */
+    border-collapse: collapse;
+    /* Removes gaps between borders */
+    background-color: var(--tertiary-color);
+    /* White background */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    /* Slight shadow for depth */
+}
+
+thead {
+    background-color: var(--primary-color);
+    /* Header background */
+    color: var(--tertiary-color);
+    /* White text */
+}
+
+thead th {
+    font-family: "Montserrat", sans-serif;
+    /* Use Montserrat for headings */
+    font-weight: 700;
+    /* Bold */
+    padding: 15px 10px;
+    /* More padding for a cleaner look */
+    text-align: center;
+}
+
+tbody td {
+    font-family: "Montserrat", sans-serif;
+    /* Consistent font */
+    font-weight: 400;
+    /* Regular weight for the body text */
+    padding: 12px;
+    /* Space inside cells */
+    text-align: center;
+    border-bottom: 1px solid #000;
+    /* Subtle divider */
+}
+
+tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+    /* Alternating row colors */
+}
+
+/* Button styling */
+.btn-rate {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-family: "Montserrat", sans-serif;
+    transition: background-color 0.3s ease;
+    margin: 5px;
+}
+
+.btn-inv {
+    background-color: var(--tertiary-color);
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-family: "Montserrat", sans-serif;
+    transition: background-color 0.3s ease;
+    margin: 5px;
+}
+
+.btn-rate:hover {
+    background-color: var(--secondary-color);
+}
+
+/* Grid container for buttons */
+.button-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 buttons per row */
+    gap: 10px; /* Space between buttons */
+}
+
+
+/* Button styling */
+.btn-diff {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 8px 60px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-family: "Montserrat", sans-serif;
+    transition: background-color 0.3s ease;
+    margin: 5px;
+}
+
+.btn-diff:hover {
+    background-color: var(--secondary-color);
+}
+
+/* Flexbox layout for button groups */
+.button-group {
+    display: flex;
+    justify-content: space-between;  /* Evenly space buttons */
+    gap: 10px;  /* Space between buttons */
+}
+
+/* Make the table responsive */
+@media (max-width: 768px) {
+    table {
+        font-size: 14px;
+        /* Smaller text on small screens */
+    }
+
+    thead th,
+    tbody td {
+        padding: 10px 5px;
+        /* Adjust padding for smaller screens */
+    }
+}
+
+/* Container for student cards */
+/* Container for student cards */
+#students-con {
+    margin: 20px;
+}
+
+/* Styling for each student card */
+.student-card {
+    display: flex;
+    align-items: center;
+    background-color: var(--tertiary-color);
+    padding: 20px;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+    width: 100%;  /* Full width for responsive design */
+    max-width: 900px;  /* Limit maximum width */
+    margin-left: auto;
+    margin-right: auto;
+    border: 1px solid var(--primary-color); /* To match table style */
+}
+
+/* Styling for student image */
+.student-image {
+    width: 80px;  /* Increased size */
+    height: 80px; /* Increased size */
+    border-radius: 50%;
+    margin-right: 20px;
+}
+
+/* Styling for student details */
+.student-details {
+    flex-grow: 1;
+    text-align: left; /* Align text to the left */
+}
+
+/* Text styling for card, aligned with Montserrat */
+.montserrat-card {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 400;
+    font-size: 1rem;
+    margin-bottom: 5px;
+}
+
+/* Adapt font size for student name */
+.montserrat-card h3 {
+    font-weight: 700;
 }
