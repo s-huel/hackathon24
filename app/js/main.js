@@ -34,3 +34,11 @@ leerjaarSelect.addEventListener('change', function() {
         }
     });
 });
+
+function logout() {
+    localStorage.removeItem("data");
+    localStorage.removeItem("role");
+    window.location.href = "index.html";
+}
+
+document.querySelector('.logout-btn').addEventListener('click', logout);
