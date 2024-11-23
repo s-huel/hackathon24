@@ -12,7 +12,6 @@
   font-weight: 900;
   font-style: normal;
   margin-bottom: 1.5rem;
-  color: #525252;
   text-align: center;
 }
 
@@ -23,7 +22,6 @@
   font-style: normal;
   margin-bottom: 1.5rem;
   font-size: 1.8rem;
-  color: #525252;
   text-align: center;
 }
 
@@ -32,7 +30,6 @@
   font-optical-sizing: auto;
   font-weight: 400;
   font-style: normal;
-  color: #525252;
 }
 
 * {
@@ -108,7 +105,7 @@ form .form-row .textarea {
 .textarea textarea:valid~label {
   transform: translateY(-20px);
   font-size: 14px;
-  color: var(--secondary-color);
+  color: var(--primary-color);
 }
 
 .textarea textarea {
@@ -142,7 +139,7 @@ form .form-row .textarea {
   content: "";
   height: 2px;
   width: 100%;
-  background: var(--secondary-color);
+  background: var(--primary-color);
   transform: scaleX(0);
   transform-origin: center;
   transition: transform 0.3s ease;
@@ -172,7 +169,7 @@ form .form-row .textarea {
   width: 300%;
   position: absolute;
   left: -100%;
-  background: var(--secondary-color);
+  background: var(--primary-color);
   transition: all 0.4s;
 }
 

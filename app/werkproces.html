@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Werkprocess</title>
+    <link rel="stylesheet" href="css/lijst.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <script src="js/main.js" defer></script>
+</head>
+
+<body>
+
+    <header>
+        <div class="docent-container">
+            <img src="assets/shark.png" alt="Docent Foto" class="docent-foto">
+            <span class="docent-naam montserrat-p">Shark The Great White</span>
+        </div>
+        <div class="navbar-rechts">
+            <select id="leerjaar-select" style="display: none;"> <!-- DONT DELETE LOGOUT WONT WORK WITHOUT -->
+                <option class="montserrat-p" value="all">Toon alle leerjaren</option>
+                <option class="montserrat-p" value="1">Leerjaar 1</option>
+                <option class="montserrat-p" value="2">Leerjaar 2</option>
+                <option class="montserrat-p" value="3">Leerjaar 3</option>
+                <option class="montserrat-p" value="4">Leerjaar 4</option>
+            </select>
+            <button class="logout-btn montserrat-p">Loguit</button>
+        </div>
+    </header>
+
+    <table border="1" cellpadding="10" cellspacing="0" class="montserrat-p">
+        <thead>
+            <tr>
+                <th class="montserrat-h2"><a href="wp1.html">WP 1</a></th>
+                <th class="montserrat-h2">Orienteren</th>
+            </tr>
+            <tr>
+                <th class="montserrat-h2">WP 2</th>
+                <th class="montserrat-h2">Development</th>
+            </tr>
+            <tr>
+                <th class="montserrat-h2">WP 3</th>
+                <th class="montserrat-h2">Expert</th>
+            </tr>
+        </thead>
+    </table>
+
+    <section id="studenten-con">
+        <div class="student-card" data-leerjaar="1">
+            <img src="assets/felix.png" alt="Student Foto" class="student-foto" style="object-fit: cover; width: 300px; height: 300px;">
+            <div class="student-info">
+                <h3 class="" montserrat-p>Félix Huel</h3>
+                <p class="montserrat-p">Studentnummer: 12</p>
+                <p class="montserrat-p">Leerjaar: 4</p>
+            </div>
+        </div>
+    </section>
+
+</body>
+
+</html>
