@@ -16,10 +16,17 @@
 
     <header>
         <div class="docent-container">
-            <img src="foto-url" alt="User Foto" class="docent-foto">
-            <span class="docent-naam montserrat-p">Naam User</span>
+            <img src="assets/shark.png" alt="Docent Foto" class="docent-foto">
+            <span class="docent-naam montserrat-p">Shark The Great White</span>
         </div>
         <div class="navbar-rechts">
+            <select id="leerjaar-select" style="display: none;"> <!-- DONT DELETE LOGOUT WONT WORK WITHOUT -->
+                <option class="montserrat-p" value="all">Toon alle leerjaren</option>
+                <option class="montserrat-p" value="1">Leerjaar 1</option>
+                <option class="montserrat-p" value="2">Leerjaar 2</option>
+                <option class="montserrat-p" value="3">Leerjaar 3</option>
+                <option class="montserrat-p" value="4">Leerjaar 4</option>
+            </select>
             <button class="logout-btn montserrat-p">Loguit</button>
         </div>
     </header>
@@ -193,7 +200,7 @@
         </tbody>
     </table>
 
-
+<script src="js/main.js"></script>
 </body>
 
 </html>
